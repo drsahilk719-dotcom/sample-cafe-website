@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Cafe - Dadri</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f7f3ee;
+color:#333;
+}
+
+header{
+background:#4b2e2e;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#6b3e26;
+text-align:center;
+padding:10px;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+background:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover;
+height:450px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero button{
+padding:12px 25px;
+margin:10px;
+border:none;
+background:#c89b6d;
+cursor:pointer;
+font-size:16px;
+}
+
+section{
+padding:50px;
+text-align:center;
+}
+
+.menu-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.menu-item{
+background:white;
+padding:20px;
+border-radius:10px;
+width:220px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+.reviews{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.review{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.booking input, .booking select{
+padding:10px;
+margin:10px;
+width:200px;
+}
+
+.contact input, .contact textarea{
+width:80%;
+padding:10px;
+margin:10px;
+}
+
+footer{
+background:#4b2e2e;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.social a{
+margin:10px;
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Sample Cafe</h1>
+<p>Fresh Coffee & Delicious Snacks</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Book</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<h1>Welcome to Sample Cafe</h1>
+<p>Best Coffee in Dadri</p>
+<button onclick="document.getElementById('menu').scrollIntoView()">View Menu</button>
+<button onclick="window.location.href='https://wa.me/919999999999'">Order on WhatsApp</button>
+</div>
+
+<section id="about">
+<h2>About Us</h2>
+<p>Sample Cafe is a cozy cafe located in Dadri, Uttar Pradesh.  
+We serve freshly brewed coffee, delicious snacks, and desserts made with quality ingredients.  
+Our warm atmosphere makes it the perfect place to relax with friends and family.</p>
+</section>
+
+<section id="menu">
+<h2>Our Menu</h2>
+
+<div class="menu-grid">
+
+<div class="menu-item">
+<h3>Cappuccino</h3>
+<p>Rich espresso with creamy foam</p>
+<b>₹120</b>
+</div>
+
+<div class="menu-item">
+<h3>Masala Tea</h3>
+<p>Traditional Indian spiced tea</p>
+<b>₹50</b>
+</div>
+
+<div class="menu-item">
+<h3>Cold Coffee</h3>
+<p>Chilled coffee with ice cream</p>
+<b>₹150</b>
+</div>
+
+<div class="menu-item">
+<h3>Veg Sandwich</h3>
+<p>Fresh vegetables with cheese</p>
+<b>₹100</b>
+</div>
+
+<div class="menu-item">
+<h3>Chocolate Cake</h3>
+<p>Soft chocolate dessert</p>
+<b>₹180</b>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+
+</div>
+
+</section>
+
+<section>
+<h2>Customer Reviews</h2>
+
+<div class="reviews">
+
+<div class="review">
+<p>"Best coffee in Dadri! The ambience is amazing."</p>
+<b>- Rahul</b>
+</div>
+
+<div class="review">
+<p>"Loved the cold coffee and snacks. Highly recommended."</p>
+<b>- Priya</b>
+</div>
+
+<div class="review">
+<p>"Great place to hang out with friends."</p>
+<b>- Aman</b>
+</div>
+
+</div>
+
+</section>
+
+<section id="booking" class="booking">
+<h2>Online Table Booking</h2>
+
+<form onsubmit="alert('Booking Request Sent!');return false;">
+
+<input type="text" placeholder="Your Name" required><br>
+
+<input type="email" placeholder="Email" required><br>
+
+<input type="date" required><br>
+
+<select>
+<option>2 People</option>
+<option>4 People</option>
+<option>6 People</option>
+</select><br>
+
+<button type="submit">Book Table</button>
+
+</form>
+
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+
+<p>📍 Dadri, Uttar Pradesh, India</p>
+<p>📞 +91 9999999999</p>
+<p>📧 samplecafe@email.com</p>
+
+<input type="text" placeholder="Your Name"><br>
+<input type="email" placeholder="Your Email"><br>
+<textarea placeholder="Message"></textarea><br>
+<button>Send Message</button>
+
+</section>
+
+<section>
+<h2>Opening Hours</h2>
+<p>Monday – Sunday</p>
+<p>9:00 AM – 11:00 PM</p>
+</section>
+
+<section>
+<h2>Find Us</h2>
+
+<iframe 
+src="https://www.google.com/maps?q=dadri+uttar+pradesh&output=embed"
+width="80%" height="300">
+</iframe>
+
+</section>
+
+<footer>
+
+<div class="social">
+
+<a href="#">Instagram</a> |
+<a href="#">Facebook</a> |
+<a href="#">Google Business</a>
+
+</div>
+
+<p>© 2026 Sample Cafe - Dadri</p>
+
+</footer>
+
+</body>
+</html>
